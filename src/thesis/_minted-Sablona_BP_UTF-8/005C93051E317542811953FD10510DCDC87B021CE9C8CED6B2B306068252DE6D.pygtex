@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// obalovací funkce Timsortu s porovnávací funkcí}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Compare}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{timsort}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{TimSort}\PYG{o}{\PYGZlt{}}\PYG{n}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{tim}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{tim}\PYG{p}{.}\PYG{n}{sort}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{//obalovací funkce Timsortu bez porovnávací funkce}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{timsort}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{timsort}\PYG{o}{\PYGZlt{}}\PYG{n}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{decltype}\PYG{p}{(}\PYG{n}{std}\PYG{o}{::}\PYG{n}{less}\PYG{o}{\PYGZlt{}\PYGZgt{}}\PYG{p}{())}\PYG{o}{\PYGZgt{}}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{less}\PYG{o}{\PYGZlt{}\PYGZgt{}}\PYG{p}{());}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

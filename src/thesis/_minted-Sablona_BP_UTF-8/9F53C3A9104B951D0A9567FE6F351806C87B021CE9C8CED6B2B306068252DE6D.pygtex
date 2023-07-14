@@ -1,0 +1,47 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//slučovací funkce 3\PYGZhy{}way merge}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Compare}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{merge\PYGZus{}3}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{dest}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// Merge the three runs into the temporary array}
+\PYG{+w}{    }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{first1}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{last1}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{first2}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{last2}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{first3}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{last3}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{comp}\PYG{p}{(}\PYG{o}{*}\PYG{n}{first2}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{first1}\PYG{p}{))}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{comp}\PYG{p}{(}\PYG{o}{*}\PYG{n}{first3}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{first2}\PYG{p}{))}
+\PYG{+w}{                }\PYG{o}{*}\PYG{p}{(}\PYG{n}{dest}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{*}\PYG{p}{(}\PYG{n}{first3}\PYG{o}{++}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{else}
+\PYG{+w}{                }\PYG{o}{*}\PYG{p}{(}\PYG{n}{dest}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{*}\PYG{p}{(}\PYG{n}{first2}\PYG{o}{++}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{comp}\PYG{p}{(}\PYG{o}{*}\PYG{n}{first3}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{first1}\PYG{p}{))}
+\PYG{+w}{                }\PYG{o}{*}\PYG{p}{(}\PYG{n}{dest}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{*}\PYG{p}{(}\PYG{n}{first3}\PYG{o}{++}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{else}
+\PYG{+w}{                }\PYG{o}{*}\PYG{p}{(}\PYG{n}{dest}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{*}\PYG{p}{(}\PYG{n}{first1}\PYG{o}{++}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{first1}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{last1}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n}{merge\PYGZus{}2}\PYG{p}{(}\PYG{n}{first2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{first3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dest}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{first2}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{last2}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n}{merge\PYGZus{}2}\PYG{p}{(}\PYG{n}{first1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{first3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last3}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dest}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{first3}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{last3}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n}{merge\PYGZus{}2}\PYG{p}{(}\PYG{n}{first1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{first2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{dest}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{//rekurzivní 3\PYGZhy{}way mergesort}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Compare}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{merge\PYGZus{}3\PYGZus{}sort}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int64\PYGZus{}t}\PYG{+w}{ }\PYG{n}{size}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{distance}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{check\PYGZus{}small\PYGZus{}and\PYGZus{}sort}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{size}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{32}\PYG{p}{))}
+\PYG{+w}{        }\PYG{k}{return}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{mid1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{next}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{size}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{mid2}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{next}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{p}{(}\PYG{n}{size}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n}{merge\PYGZus{}3\PYGZus{}sort}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{merge\PYGZus{}3\PYGZus{}sort}\PYG{p}{(}\PYG{n}{mid1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{merge\PYGZus{}3\PYGZus{}sort}\PYG{p}{(}\PYG{n}{mid2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{o}{::}\PYG{n}{value\PYGZus{}type}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{tmp}\PYG{p}{(}\PYG{n}{std}\PYG{o}{::}\PYG{n}{distance}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{));}
+\PYG{+w}{    }\PYG{n}{merge\PYGZus{}3}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid2}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{tmp}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{tmp}\PYG{p}{.}\PYG{n}{end}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{first}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

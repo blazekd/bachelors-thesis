@@ -1,0 +1,721 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{timexplain5}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=adabd2aa7bc4d1316abb513746d99dd5}{%
+           family={Bauermeister},
+           familyi={B\bibinitperiod},
+           given={Rylan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{adabd2aa7bc4d1316abb513746d99dd5}
+      \strng{fullhash}{adabd2aa7bc4d1316abb513746d99dd5}
+      \strng{bibnamehash}{adabd2aa7bc4d1316abb513746d99dd5}
+      \strng{authorbibnamehash}{adabd2aa7bc4d1316abb513746d99dd5}
+      \strng{authornamehash}{adabd2aa7bc4d1316abb513746d99dd5}
+      \strng{authorfullhash}{adabd2aa7bc4d1316abb513746d99dd5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Medium}
+      \field{day}{25}
+      \field{month}{4}
+      \field{title}{Understanding Timsort}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://medium.com/@rylanbauermeister/understanding-timsort-191c758a42f3
+      \endverb
+      \verb{url}
+      \verb https://medium.com/@rylanbauermeister/understanding-timsort-191c758a42f3
+      \endverb
+    \endentry
+    \entry{pythonimpl}{incollection}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Github}
+      \field{day}{8}
+      \field{month}{6}
+      \field{title}{cpython/listobject.c}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/python/cpython/blob/bcb198385dee469d630a184182df9dc1463e2c47/Objects/listobject.c
+      \endverb
+      \verb{url}
+      \verb https://github.com/python/cpython/blob/bcb198385dee469d630a184182df9dc1463e2c47/Objects/listobject.c
+      \endverb
+    \endentry
+    \entry{rustimpl}{incollection}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Github}
+      \field{day}{26}
+      \field{month}{12}
+      \field{title}{rust/src/liballoc/slice.rs}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/rust-lang/rust/blob/5f60208ba11171c249284f8fe0ea6b3e9b63383c/src/liballoc/slice.rs#L841-L980
+      \endverb
+      \verb{url}
+      \verb https://github.com/rust-lang/rust/blob/5f60208ba11171c249284f8fe0ea6b3e9b63383c/src/liballoc/slice.rs#L841-L980
+      \endverb
+    \endentry
+    \entry{javaimpl}{incollection}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Git at Google}
+      \field{day}{13}
+      \field{month}{5}
+      \field{title}{TimSort.java}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2010}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://android.googlesource.com/platform/libcore/+/gingerbread/luni/src/main/java/java/util/TimSort.java
+      \endverb
+      \verb{url}
+      \verb https://android.googlesource.com/platform/libcore/+/gingerbread/luni/src/main/java/java/util/TimSort.java
+      \endverb
+    \endentry
+    \entry{v8impl}{incollection}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Github}
+      \field{day}{8}
+      \field{month}{3}
+      \field{title}{v8/third\_party/v8/builtins/array-sort.tq}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/v8/v8/blob/main/third_party/v8/builtins/array-sort.tq
+      \endverb
+      \verb{url}
+      \verb https://github.com/v8/v8/blob/main/third_party/v8/builtins/array-sort.tq
+      \endverb
+    \endentry
+    \entry{swiftimpl}{incollection}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Github}
+      \field{day}{26}
+      \field{month}{9}
+      \field{title}{swift/stdlib/public/core/Sort.swift}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/apple/swift/blob/main/stdlib/public/core/Sort.swift
+      \endverb
+      \verb{url}
+      \verb https://github.com/apple/swift/blob/main/stdlib/public/core/Sort.swift
+      \endverb
+    \endentry
+    \entry{timexplain4}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=34089fa4f93b4063c4bcf72f39cec9db}{%
+           family={Mervin},
+           familyi={M\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{34089fa4f93b4063c4bcf72f39cec9db}
+      \strng{fullhash}{34089fa4f93b4063c4bcf72f39cec9db}
+      \strng{bibnamehash}{34089fa4f93b4063c4bcf72f39cec9db}
+      \strng{authorbibnamehash}{34089fa4f93b4063c4bcf72f39cec9db}
+      \strng{authornamehash}{34089fa4f93b4063c4bcf72f39cec9db}
+      \strng{authorfullhash}{34089fa4f93b4063c4bcf72f39cec9db}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Medium}
+      \field{day}{22}
+      \field{month}{3}
+      \field{title}{What is Tim Sort?}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ericmervin.medium.com/what-is-timsort-76173b49bd16
+      \endverb
+      \verb{url}
+      \verb https://ericmervin.medium.com/what-is-timsort-76173b49bd16
+      \endverb
+    \endentry
+    \entry{timexplain1}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=e3aa619a4412763613574bb6b6fc1510}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{fullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{bibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorbibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authornamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorfullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \field{extraname}{1}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{mail.python.org}
+      \field{day}{22}
+      \field{hour}{22}
+      \field{minute}{7}
+      \field{month}{7}
+      \field{second}{57}
+      \field{timezone}{-04\bibtzminsep 00}
+      \field{title}{[Python-Dev] Sorting}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026897.html
+      \endverb
+      \verb{url}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026897.html
+      \endverb
+    \endentry
+    \entry{timexplain2}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=e3aa619a4412763613574bb6b6fc1510}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{fullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{bibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorbibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authornamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorfullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \field{extraname}{2}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{mail.python.org}
+      \field{day}{20}
+      \field{hour}{23}
+      \field{minute}{26}
+      \field{month}{7}
+      \field{second}{44}
+      \field{timezone}{-04\bibtzminsep 00}
+      \field{title}{[Python-Dev] Sorting}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026853.html
+      \endverb
+      \verb{url}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026853.html
+      \endverb
+    \endentry
+    \entry{timexplain3}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=e3aa619a4412763613574bb6b6fc1510}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{fullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{bibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorbibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authornamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorfullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \field{extraname}{3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{mail.python.org}
+      \field{day}{24}
+      \field{hour}{19}
+      \field{minute}{1}
+      \field{month}{7}
+      \field{second}{32}
+      \field{timezone}{-04\bibtzminsep 00}
+      \field{title}{[Python-Dev] Sorting}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026920.html
+      \endverb
+      \verb{url}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026920.html
+      \endverb
+    \endentry
+    \entry{timexplain6}{incollection}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Github}
+      \field{day}{2}
+      \field{month}{2}
+      \field{title}{cpython/Objects/listsort.txt}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/python/cpython/blob/bcb198385dee469d630a184182df9dc1463e2c47/Objects/listsort.txt
+      \endverb
+      \verb{url}
+      \verb https://github.com/python/cpython/blob/bcb198385dee469d630a184182df9dc1463e2c47/Objects/listsort.txt
+      \endverb
+    \endentry
+    \entry{exponentialsearch}{misc}{}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Wikipedia}
+      \field{day}{19}
+      \field{month}{3}
+      \field{title}{Exponential search}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Exponential_search
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Exponential_search
+      \endverb
+    \endentry
+    \entry{3merge1}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=c59b8b0cf257b74a625d2eb1ae1a5514}{%
+           family={Gilbert},
+           familyi={G\bibinitperiod},
+           given={Scott},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c59b8b0cf257b74a625d2eb1ae1a5514}
+      \strng{fullhash}{c59b8b0cf257b74a625d2eb1ae1a5514}
+      \strng{bibnamehash}{c59b8b0cf257b74a625d2eb1ae1a5514}
+      \strng{authorbibnamehash}{c59b8b0cf257b74a625d2eb1ae1a5514}
+      \strng{authornamehash}{c59b8b0cf257b74a625d2eb1ae1a5514}
+      \strng{authorfullhash}{c59b8b0cf257b74a625d2eb1ae1a5514}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{mail.python.org}
+      \field{day}{22}
+      \field{hour}{23}
+      \field{minute}{22}
+      \field{month}{7}
+      \field{second}{12}
+      \field{timezone}{-07\bibtzminsep 00}
+      \field{title}{[Python-Dev] Sorting}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026900.html
+      \endverb
+      \verb{url}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026900.html
+      \endverb
+    \endentry
+    \entry{3mergeresponse}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=e3aa619a4412763613574bb6b6fc1510}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{fullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{bibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorbibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authornamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorfullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{mail.python.org}
+      \field{day}{23}
+      \field{hour}{4}
+      \field{minute}{30}
+      \field{month}{7}
+      \field{second}{11}
+      \field{timezone}{-04\bibtzminsep 00}
+      \field{title}{[Python-Dev] Sorting}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026902.html
+      \endverb
+      \verb{url}
+      \verb https://mail.python.org/pipermail/python-dev/2002-July/026902.html
+      \endverb
+    \endentry
+    \entry{kwaymergemax}{incollection}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Stack Overflow}
+      \field{day}{17}
+      \field{month}{1}
+      \field{title}{Maximum K for K-way merge}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://stackoverflow.com/questions/41686325/maximum-k-for-k-way-merge
+      \endverb
+      \verb{url}
+      \verb https://stackoverflow.com/questions/41686325/maximum-k-for-k-way-merge
+      \endverb
+    \endentry
+    \entry{analysiskmerge}{incollection}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Stack Overflow}
+      \field{day}{7}
+      \field{month}{12}
+      \field{title}{why should we use n-way merge? what are its advantages over 2-way merge?}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2013}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://stackoverflow.com/questions/14713468/why-should-we-use-n-way-merge-what-are-its-advantages-over-2-way-merge
+      \endverb
+      \verb{url}
+      \verb https://stackoverflow.com/questions/14713468/why-should-we-use-n-way-merge-what-are-its-advantages-over-2-way-merge
+      \endverb
+    \endentry
+    \entry{kwaymerge}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Wikipedia}
+      \field{day}{30}
+      \field{month}{4}
+      \field{title}{k-way merge algorithm}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/K-way_merge_algorithm
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/K-way_merge_algorithm
+      \endverb
+    \endentry
+    \entry{externalsort}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Wikipedia}
+      \field{day}{13}
+      \field{month}{3}
+      \field{title}{External sorting}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/External_sorting
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/External_sorting
+      \endverb
+    \endentry
+    \entry{openmp1}{misc}{}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Wikipedia}
+      \field{day}{24}
+      \field{month}{12}
+      \field{title}{OpenMP}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2021}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cs.wikipedia.org/wiki/OpenMP
+      \endverb
+      \verb{url}
+      \verb https://cs.wikipedia.org/wiki/OpenMP
+      \endverb
+    \endentry
+    \entry{soodparallel}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7d91f2e7e5c7980c45178b9420c187db}{%
+           family={Sood},
+           familyi={S\bibinitperiod},
+           given={Saurabh},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7d91f2e7e5c7980c45178b9420c187db}
+      \strng{fullhash}{7d91f2e7e5c7980c45178b9420c187db}
+      \strng{bibnamehash}{7d91f2e7e5c7980c45178b9420c187db}
+      \strng{authorbibnamehash}{7d91f2e7e5c7980c45178b9420c187db}
+      \strng{authornamehash}{7d91f2e7e5c7980c45178b9420c187db}
+      \strng{authorfullhash}{7d91f2e7e5c7980c45178b9420c187db}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Saurabh Sood's Blog}
+      \field{day}{18}
+      \field{month}{4}
+      \field{title}{Parallelizing TimSort}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2017}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://saurabhsoodweb.wordpress.com/2017/04/18/parallelizing-timsort/
+      \endverb
+      \verb{url}
+      \verb https://saurabhsoodweb.wordpress.com/2017/04/18/parallelizing-timsort/
+      \endverb
+    \endentry
+    \entry{mergesortparallel}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=a909a0a912fd442ea3d7e43683355fa2}{%
+           family={Bukata},
+           familyi={B\bibinitperiod},
+           given={Libor},
+           giveni={L\bibinitperiod}}}%
+        {{hash=1ee60373b9b5f61e70634f6851ad3d7c}{%
+           family={Dvořák},
+           familyi={D\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{935d9277f2d2a5a2eba156d9a1a373ec}
+      \strng{fullhash}{935d9277f2d2a5a2eba156d9a1a373ec}
+      \strng{bibnamehash}{935d9277f2d2a5a2eba156d9a1a373ec}
+      \strng{authorbibnamehash}{935d9277f2d2a5a2eba156d9a1a373ec}
+      \strng{authornamehash}{935d9277f2d2a5a2eba156d9a1a373ec}
+      \strng{authorfullhash}{935d9277f2d2a5a2eba156d9a1a373ec}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Advanced programming with OpenMP}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cw.fel.cvut.cz/old/_media/courses/b4m35pag/lab6_slides_advanced_openmp.pdf
+      \endverb
+      \verb{url}
+      \verb https://cw.fel.cvut.cz/old/_media/courses/b4m35pag/lab6_slides_advanced_openmp.pdf
+      \endverb
+    \endentry
+    \entry{gfxtimsort}{incollection}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Github}
+      \field{day}{24}
+      \field{month}{4}
+      \field{title}{timsort/cpp-Timsort: A c++ implementation of timsort}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/timsort/cpp-TimSort
+      \endverb
+      \verb{url}
+      \verb https://github.com/timsort/cpp-TimSort
+      \endverb
+    \endentry
+    \entry{runstar}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{FIT CTU Courses}
+      \field{day}{26}
+      \field{month}{4}
+      \field{title}{Překlad, ladění a spuštění paralelní programu na klastru STAR • NI-PDP • FIT ČVUT Course Pages}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://courses.fit.cvut.cz/NI-PDP/labs/run-star.html
+      \endverb
+      \verb{url}
+      \verb https://courses.fit.cvut.cz/NI-PDP/labs/run-star.html
+      \endverb
+    \endentry
+    \entry{starklastr}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{FIT CTU Courses}
+      \field{day}{9}
+      \field{month}{2}
+      \field{title}{Výpočetní klastr Star • NI-PDP • FIT ČVUT Course Pages}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://courses.fit.cvut.cz/NI-PDP/labs/klastr-star.html
+      \endverb
+      \verb{url}
+      \verb https://courses.fit.cvut.cz/NI-PDP/labs/klastr-star.html
+      \endverb
+    \endentry
+    \entry{chrono}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{cppreference.com}
+      \field{day}{10}
+      \field{month}{1}
+      \field{title}{Date and time utilities}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.cppreference.com/w/cpp/chrono
+      \endverb
+      \verb{url}
+      \verb https://en.cppreference.com/w/cpp/chrono
+      \endverb
+    \endentry
+    \entry{wellrng}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Wikipedia}
+      \field{day}{10}
+      \field{month}{1}
+      \field{title}{Well equidistributed long-period linear}
+      \field{urlday}{11}
+      \field{urlmonth}{5}
+      \field{urlyear}{2023}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Well_equidistributed_long-period_linear
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Well_equidistributed_long-period_linear
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

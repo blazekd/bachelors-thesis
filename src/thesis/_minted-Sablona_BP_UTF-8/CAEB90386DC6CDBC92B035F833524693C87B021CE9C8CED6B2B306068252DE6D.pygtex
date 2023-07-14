@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//metoda gallop\PYGZus{}left ve třídě TimSort}
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{gallop\PYGZus{}left}\PYG{p}{(}\PYG{k}{const}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{\PYGZus{}first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{T}\PYG{+w}{ }\PYG{n}{key}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{len}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{hint}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{lastOfs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{comp}\PYG{p}{(}\PYG{o}{*}\PYG{p}{(}\PYG{n}{\PYGZus{}first}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{hint}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{key}\PYG{p}{))}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{// key \PYGZgt{} a[base + hint]}
+\PYG{+w}{        }\PYG{c+c1}{// Gallop right until a[base+hint+lastOfs] \PYGZlt{} key \PYGZlt{}= a[base+hint+ofs]}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{len}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{hint}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{(}\PYG{o}{*}\PYG{p}{(}\PYG{n}{\PYGZus{}first}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{hint}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{ofs}\PYG{p}{)),}\PYG{+w}{ }\PYG{n}{key}\PYG{p}{))}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{lastOfs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ofs}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{   }\PYG{c+c1}{// int overflow}
+\PYG{+w}{                }\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{p}{)}
+\PYG{+w}{            }\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{lastOfs}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{n}{hint}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{n}{hint}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{// key \PYGZlt{}= a[base + hint]}
+\PYG{+w}{        }\PYG{c+c1}{// Gallop left until a[base+hint\PYGZhy{}ofs] \PYGZlt{} key \PYGZlt{}= a[base+hint\PYGZhy{}lastOfs]}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{hint}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{o}{!}\PYG{n}{comp}\PYG{p}{(}\PYG{o}{*}\PYG{p}{(}\PYG{n}{\PYGZus{}first}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{hint}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{ofs}\PYG{p}{)),}\PYG{+w}{ }\PYG{n}{key}\PYG{p}{))}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{lastOfs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ofs}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{\PYGZlt{}=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{   }\PYG{c+c1}{// int overflow}
+\PYG{+w}{                }\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{p}{)}
+\PYG{+w}{            }\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{maxOfs}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{tmp}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{lastOfs}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{lastOfs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{hint}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{ofs}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{ofs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{hint}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{tmp}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{c+cm}{/*}
+\PYG{c+cm}{     * We now know that a[b + lastOfs] \PYGZlt{} key \PYGZlt{}= a[b + ofs] is true. Do a binary}
+\PYG{c+cm}{     * search, to find exact position.}
+\PYG{c+cm}{     */}
+\PYG{+w}{    }\PYG{n}{lastOfs}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{// binary search}
+\PYG{+w}{    }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{pos}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{lower\PYGZus{}bound}\PYG{p}{(}\PYG{n}{\PYGZus{}first}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{lastOfs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}first}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{ofs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{key}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{pos}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{\PYGZus{}first}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

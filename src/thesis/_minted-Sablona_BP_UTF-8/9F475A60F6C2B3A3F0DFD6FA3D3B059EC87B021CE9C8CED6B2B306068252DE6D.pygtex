@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//struktura MySlice}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{o}{\PYGZgt{}}
+\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{MySlice}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{start}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{end}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{MySlice}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{default}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{MySlice}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{start}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{end}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{start}\PYG{p}{(}\PYG{n}{start}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{end}\PYG{p}{(}\PYG{n}{end}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}\PYGZcb{}}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

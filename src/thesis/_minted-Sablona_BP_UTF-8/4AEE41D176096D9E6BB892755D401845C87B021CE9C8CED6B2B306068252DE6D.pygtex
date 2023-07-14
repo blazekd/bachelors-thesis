@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Struktura Slice}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{o}{\PYGZgt{}}
+\PYG{k}{struct}\PYG{+w}{ }\PYG{n+nc}{Slice}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{index}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{length}\PYG{p}{;}
+\PYG{p}{\PYGZcb{};}
+\end{Verbatim}

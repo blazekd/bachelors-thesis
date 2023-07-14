@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//funkce pro hledání runů od konce}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{find\PYGZus{}run\PYGZus{}rev}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{ }\PYG{o}{\PYGZca{}\PYGZca{}}\PYG{n}{I}\PYG{c+c1}{//It idx = index + 1;}
+\PYG{+w}{    }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{idx}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{index}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{comp}\PYG{p}{(}\PYG{o}{*}\PYG{n}{idx}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{*}\PYG{p}{(}\PYG{n}{idx}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)))}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{// strictly descending run}
+\PYG{+w}{        }\PYG{k}{do}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{idx}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//\PYGZcb{} while (idx != last \PYGZam{}\PYGZam{} comp(*idx, *(idx \PYGZhy{} 1)));}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{idx}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{first}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{(}\PYG{o}{*}\PYG{n}{idx}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{*}\PYG{p}{(}\PYG{n}{idx}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)));}
+\PYG{+w}{        }\PYG{c+c1}{// make ascending}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{halfLen}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{distance}\PYG{p}{(}\PYG{n}{idx}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{index}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{j}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{j}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{halfLen}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{++}\PYG{n}{j}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{T}\PYG{+w}{ }\PYG{n}{tmp}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{o}{*}\PYG{p}{(}\PYG{n}{idx}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{));}
+\PYG{+w}{            }\PYG{o}{*}\PYG{p}{(}\PYG{n}{idx}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{o}{*}\PYG{p}{(}\PYG{n}{index}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{j}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)));}
+\PYG{+w}{            }\PYG{o}{*}\PYG{p}{(}\PYG{n}{index}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{j}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{))}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{// ascending run}
+\PYG{+w}{        }\PYG{k}{do}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{idx}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//\PYGZcb{} while (idx != last \PYGZam{}\PYGZam{} comp(*(idx \PYGZhy{} 1), *idx));}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{idx}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{first}\PYG{+w}{ }\PYG{o}{\PYGZam{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{(}\PYG{o}{*}\PYG{p}{(}\PYG{n}{idx}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{),}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{idx}\PYG{p}{));}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{c+c1}{//int force = std::distance(index, idx);}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{force}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{distance}\PYG{p}{(}\PYG{n}{idx}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{index}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{force}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{minRun}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{c+c1}{//It hi = std::distance(idx, last) \PYGZlt{} minRun ? last : index + minRun;}
+\PYG{+w}{        }\PYG{c+c1}{//binary\PYGZus{}insertion\PYGZus{}sort(index, hi, idx);}
+\PYG{+w}{        }\PYG{c+c1}{//idx = hi;}
+\PYG{+w}{        }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{lo}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{distance}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{index}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{minRun}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n}{first}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{index}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{minRun}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{binary\PYGZus{}insertion\PYGZus{}sort\PYGZus{}end}\PYG{p}{(}\PYG{n}{lo}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{index}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{idx}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{idx}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{lo}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{c+c1}{//runs[runsLen++]= \PYGZob{} index, (int)std::distance(index, idx) \PYGZcb{};}
+\PYG{+w}{    }\PYG{n}{runs}\PYG{p}{[}\PYG{n}{runsLen}\PYG{o}{++}\PYG{p}{]}\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{n}{idx}\PYG{p}{,}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{p}{)}\PYG{n}{std}\PYG{o}{::}\PYG{n}{distance}\PYG{p}{(}\PYG{n}{idx}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{index}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZcb{};}
+\PYG{+w}{    }\PYG{n}{index}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{idx}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\end{Verbatim}

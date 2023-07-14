@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//funkce merge\PYGZus{}sort\PYGZus{}parallel\PYGZus{}a\PYGZus{}rec}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{Compare}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{merge\PYGZus{}sort\PYGZus{}parallel\PYGZus{}a\PYGZus{}rec}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{left}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{right}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{left}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{right}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{right}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{left}\PYG{+w}{ }\PYG{o}{\PYGZgt{}=}\PYG{+w}{ }\PYG{l+m+mi}{32}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{mid}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{left}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{distance}\PYG{p}{(}\PYG{n}{left}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{right}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{;}
+\PYG{c+cp}{\PYGZsh{}pragma omp taskgroup}
+\PYG{+w}{            }\PYG{p}{\PYGZob{}}
+\PYG{c+cp}{\PYGZsh{}pragma omp task untied if(right \PYGZhy{} left \PYGZgt{}= (1\PYGZlt{}\PYGZlt{}14))}
+\PYG{+w}{                }\PYG{n}{merge\PYGZus{}sort\PYGZus{}parallel\PYGZus{}a\PYGZus{}rec}\PYG{p}{(}\PYG{n}{left}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{c+cp}{\PYGZsh{}pragma omp task untied if(right \PYGZhy{} left \PYGZgt{}= (1\PYGZlt{}\PYGZlt{}14))}
+\PYG{+w}{                }\PYG{n}{merge\PYGZus{}sort\PYGZus{}parallel\PYGZus{}a\PYGZus{}rec}\PYG{p}{(}\PYG{n}{mid}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{right}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{c+cp}{\PYGZsh{}pragma omp taskyield}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{n}{std}\PYG{o}{::}\PYG{n}{inplace\PYGZus{}merge}\PYG{p}{(}\PYG{n}{left}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{right}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{binary\PYGZus{}insertion\PYGZus{}sort}\PYG{p}{(}\PYG{n}{left}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{right}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{left}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{//funkce začínající řazení paralelním mergesortem}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{Compare}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{merge\PYGZus{}sort\PYGZus{}parallel\PYGZus{}a}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{c+cp}{\PYGZsh{}pragma omp parallel}
+\PYG{c+cp}{\PYGZsh{}pragma omp single}
+\PYG{+w}{    }\PYG{n}{merge\PYGZus{}sort\PYGZus{}parallel\PYGZus{}a\PYGZus{}rec}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+
+\end{Verbatim}

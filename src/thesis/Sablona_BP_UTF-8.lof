@@ -1,0 +1,77 @@
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}
+\setforeignlanguage {czech}
+\addvspace {10pt}
+\addvspace {10pt}
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Graf porovnávající náhodná data třídy LargeTestClass pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{38}{figure.4.1}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Graf porovnávající náhodná data typu integer pro algoritmy\linebreak gfx::timsort, timsort, std::stable\_sort a std::sort}}{38}{figure.4.2}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Graf porovnávající náhodná data typu string pro algoritmy\linebreak gfx::timsort, timsort, std::stable\_sort a std::sort}}{39}{figure.4.3}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Graf porovnávající náhodná data stringů s různou délkou pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{39}{figure.4.4}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Graf porovnávající data s hodně duplikáty pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{40}{figure.4.5}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Graf porovnávající data s obsahující několik seřazených částí pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{41}{figure.4.6}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Graf porovnávající data ve tvaru pyramidy pro algoritmy\linebreak gfx::timsort, timsort, std::stable\_sort a std::sort}}{41}{figure.4.7}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Graf porovnávající data seřazená v opačném pořadí pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{42}{figure.4.8}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Graf porovnávající seřazená data pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{42}{figure.4.9}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Graf porovnávající náhodná data řazena funkcí less pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{43}{figure.4.10}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Graf porovnávající náhodná data řazena funkcí my\_compare pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{43}{figure.4.11}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Graf porovnávající náhodná data řazena funkcí slow\_compare pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{44}{figure.4.12}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Graf zobrazující počet porovnání náhodných dat pro algoritmy gfx::timsort, timsort, std::stable\_sort a std::sort}}{44}{figure.4.13}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Graf porovnávající algoritmy gfx::timsort, std::sort, std::stable\_sort a timsort na různých datech o stejné velikosti}}{46}{figure.4.14}%
+\setforeignlanguage {czech}
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Graf porovnávající algoritmy timsort\_rev, timsort,\linebreak it\_merge\_2\_sort\_rev a it\_merge\_2\_sort na náhodných datech}}{47}{figure.4.15}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Graf porovnávající algoritmy timsort\_rev, timsort,\linebreak it\_merge\_2\_sort\_rev a it\_merge\_2\_sort na několika seřazených částech}}{48}{figure.4.16}%
+\setforeignlanguage {czech}
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Porovnání algoritmů it\_merge\_4b\_sort, it\_merge\_4a\_sort,\linebreak it\_merge\_3\_sort a it\_merge\_3\_sort na náhodných datech typu LargeTestClass}}{49}{figure.4.17}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Porovnání algoritmů it\_merge\_4b\_sort, it\_merge\_4a\_sort,\linebreak it\_merge\_3\_sort a it\_merge\_3\_sort na náhodných datech typu integer}}{49}{figure.4.18}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Porovnání algoritmů it\_merge\_4b\_sort, it\_merge\_4a\_sort,\linebreak it\_merge\_3\_sort a it\_merge\_3\_sort na náhodných datech typu integer pomocí slow\_compare}}{50}{figure.4.19}%
+\setforeignlanguage {czech}
+\setforeignlanguage {czech}
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Zrychlení merge\_sort\_parallel\_a oproti timsortu v závislosti na počtu vláken, náhodná čísla}}{53}{figure.4.20}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Zrychlení merge\_sort\_parallel\_b oproti timsortu v závislosti na počtu vláken, náhodná čísla}}{54}{figure.4.21}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Zrychlení timsort\_parallel\_a oproti timsortu v závislosti na počtu vláken, náhodná čísla}}{55}{figure.4.22}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Zrychlení timsort\_parallel\_b oproti timsortu v závislosti na počtu vláken, náhodná čísla}}{56}{figure.4.23}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Zrychlení merge\_sort\_parallel\_a oproti timsortu v závislosti na počtu vláken, náhodné stringy}}{57}{figure.4.24}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Zrychlení merge\_sort\_parallel\_b oproti timsortu v závislosti na počtu vláken, náhodné stringy}}{58}{figure.4.25}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.26}{\ignorespaces Zrychlení timsort\_parallel\_a oproti timsortu v závislosti na počtu vláken, náhodné stringy}}{59}{figure.4.26}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Zrychlení timsort\_parallel\_b oproti timsortu v závislosti na počtu vláken, náhodné stringy}}{60}{figure.4.27}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.28}{\ignorespaces Porovnání doby běhu algoritmů pro 2 vlákna a různá data o stejné velikosti}}{61}{figure.4.28}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.29}{\ignorespaces Porovnání doby běhu algoritmů pro 4 vlákna a různá data o stejné velikosti}}{62}{figure.4.29}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.30}{\ignorespaces Porovnání doby běhu algoritmů pro 8 vláken a různá data o stejné velikosti}}{63}{figure.4.30}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Porovnání doby běhu algoritmů pro 16 vláken a různá data o stejné velikosti}}{64}{figure.4.31}%
+\setforeignlanguage {czech}
+\contentsline {figure}{\numberline {4.32}{\ignorespaces Porovnání doby běhu algoritmů pro 20 vláken a různá data o stejné velikosti}}{65}{figure.4.32}%
+\addvspace {10pt}
+\addvspace {10pt}
+\addvspace {10pt}

@@ -1,0 +1,42 @@
+## Multithreaded Timsort
+
+This is my bachelor's thesis. Please note that the text part is written in Czech. https://dspace.cvut.cz/handle/10467/109377?locale-attribute=en[Link to school site]
+
+The aim of this thesis is to explore the sequential optimizations of the Timsort algorithm and its parallelization using OpenMP. Newly developed algorithms are tested and compared with the base version of Timsort and other selected sorting algorithms. This testing is performed on the school server STAR, designed for objective testing of parallel algorithms. All implementations are in the C++ language.
+
+https://github.com/timsort/cpp-TimSort[Another implementation of timsort] in file `gfxtimsort.hpp` and https://cw.fel.cvut.cz/old/_media/courses/b4m35pag/lab6_slides_advanced_openmp.pdf[parallel mergesort] in file `mergesort_parallel.hpp` are included for comparison. 
+
+.Repository tree structure
+* `exe/`
+  ** `generate_tests` <- executable for creating tests
+  ** `tester` <- executable for running tests
+* `results/` <- my results
+* `src/`
+  ** `impl/` <- source code for executables
+  ** `thesis/` <- thesis source code in LaTeX
+* `text/thesis.pdf` <- thesis text
+* `readme.txt` <- simple readme in czech
+
+
+## Thesis assignment
+Name: Multithreaded Timsort +
+
+
+[horizontal]
+.Instructions
+1):: Study [1,2] and implement sequential version of Timsort algorithm.
+2):: Discuss the possibilities of optimizing and parallelizing this algorithm using OpenMP technology [3,4,5].
+3):: Implement selected optiomalizations and paralelel version of this algorithm.
+4):: Compare the performance of individual versions on the STAR school server and discuss achieved results.
+
+[horizontal]
+.References
+[1]:: https://ericmervin.medium.com/what-is-timsort-76173b49bd16
+[2]:: https://github.com/python/cpython/blob/bcb198385dee469d630a184182df9dc1463e2c47/Objects/listsort.txt
+[3]:: https://github.com/rust-lang/rust/blob/5f60208ba11171c249284f8fe0ea6b3e9b63383c/src/liballoc/slice.rs#L841-L980
+[4]:: https://saurabhsoodweb.wordpress.com/2017/04/18/parallelizing-timsort/
+[5]:: https://mail.python.org/pipermail/python-dev/2002-July/026900.html
+
+## Rights
+
+A university thesis is a work protected by the Copyright Act. Extracts, copies and transcripts of the thesis are allowed for personal use only and at one's own expense. The use of thesis should be in compliance with the Copyright Act http://www.mkcr.cz/assets/autorske-pravo/01-3982006.pdf and the citation ethics http://knihovny.cvut.cz/vychova/vskp.html

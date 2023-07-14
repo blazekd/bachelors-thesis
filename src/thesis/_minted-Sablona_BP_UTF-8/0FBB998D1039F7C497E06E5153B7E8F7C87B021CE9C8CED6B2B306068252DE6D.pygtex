@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//funkce count\PYGZus{}compare}
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{atomic}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{uint64\PYGZus{}t}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{compareCount}\PYG{p}{;}
+
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{T}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{bool}\PYG{+w}{ }\PYG{n}{count\PYGZus{}compare}\PYG{p}{(}\PYG{k}{const}\PYG{+w}{ }\PYG{n}{T}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{const}\PYG{+w}{ }\PYG{n}{T}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{compareCount}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{x}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

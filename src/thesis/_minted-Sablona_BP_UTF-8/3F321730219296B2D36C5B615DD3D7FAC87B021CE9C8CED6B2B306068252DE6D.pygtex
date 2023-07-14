@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//binary\PYGZus{}insertion\PYGZus{}sort určený pro řazení při hledání runů od konce}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{binary\PYGZus{}insertion\PYGZus{}sort\PYGZus{}end}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{lo}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{hi}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{sorted}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{sorted}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{hi}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{sorted}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(;}\PYG{+w}{ }\PYG{n}{lo}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{sorted}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{sorted}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{T}\PYG{+w}{ }\PYG{n}{pivot}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{o}{*}\PYG{p}{(}\PYG{n}{sorted}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{));}
+\PYG{+w}{        }\PYG{n}{It}\PYG{+w}{ }\PYG{k}{const}\PYG{+w}{ }\PYG{n}{pos}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{lower\PYGZus{}bound}\PYG{p}{(}\PYG{n}{sorted}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{hi}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pivot}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{p}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{sorted}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{p}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{pos}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{++}\PYG{n}{p}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{o}{*}\PYG{n}{p}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{o}{*}\PYG{n}{std}\PYG{o}{::}\PYG{n}{next}\PYG{p}{(}\PYG{n}{p}\PYG{p}{));}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{o}{*}\PYG{p}{(}\PYG{n}{pos}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{n}{pivot}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{//původní binary\PYGZus{}insertion\PYGZus{}sort}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{binary\PYGZus{}insertion\PYGZus{}sort}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{lo}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{hi}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{start}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{start}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{lo}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{o}{++}\PYG{n}{start}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(;}\PYG{+w}{ }\PYG{n}{start}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{hi}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{++}\PYG{n}{start}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{T}\PYG{+w}{ }\PYG{n}{pivot}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{o}{*}\PYG{n}{start}\PYG{p}{);}
+\PYG{+w}{        }\PYG{n}{It}\PYG{+w}{ }\PYG{k}{const}\PYG{+w}{ }\PYG{n}{pos}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{upper\PYGZus{}bound}\PYG{p}{(}\PYG{n}{lo}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{start}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{pivot}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{p}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{start}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{p}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{pos}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{p}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{o}{*}\PYG{n}{p}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{o}{*}\PYG{n}{std}\PYG{o}{::}\PYG{n}{prev}\PYG{p}{(}\PYG{n}{p}\PYG{p}{));}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{o}{*}\PYG{n}{pos}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{move}\PYG{p}{(}\PYG{n}{pivot}\PYG{p}{);}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

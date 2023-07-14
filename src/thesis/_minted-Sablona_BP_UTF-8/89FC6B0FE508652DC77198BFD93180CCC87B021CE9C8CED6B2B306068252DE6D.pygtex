@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{//it\PYGZus{}merge\PYGZus{}2\PYGZus{}sort s vyhledáváním runů od konce}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Compare}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{it\PYGZus{}merge\PYGZus{}2\PYGZus{}sort\PYGZus{}rev}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{deque}\PYG{o}{\PYGZlt{}}\PYG{n}{MySlice}\PYG{o}{\PYGZlt{}}\PYG{n}{It}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{runs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{find\PYGZus{}run\PYGZus{}rev}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{merge\PYGZus{}runs\PYGZus{}final}\PYG{p}{(}\PYG{n}{runs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{//původní it\PYGZus{}merge\PYGZus{}2\PYGZus{}sort}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Compare}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{it\PYGZus{}merge\PYGZus{}2\PYGZus{}sort}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{deque}\PYG{o}{\PYGZlt{}}\PYG{n}{MySlice}\PYG{o}{\PYGZlt{}}\PYG{n}{It}\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{runs}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{find\PYGZus{}run}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{merge\PYGZus{}runs\PYGZus{}final}\PYG{p}{(}\PYG{n}{runs}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

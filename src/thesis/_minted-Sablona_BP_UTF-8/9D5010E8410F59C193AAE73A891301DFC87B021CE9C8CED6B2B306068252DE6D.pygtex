@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// kód paralelního Timsortu pomocí OpenMP}
+\PYG{k}{template}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Compare}\PYG{o}{\PYGZgt{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{timsort\PYGZus{}parallel\PYGZus{}a}\PYG{p}{(}\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int64\PYGZus{}t}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{distance}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k+kt}{uint32\PYGZus{}t}\PYG{+w}{ }\PYG{n}{threads}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{\PYGZgt{}\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{12}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{uint32\PYGZus{}t}\PYG{+w}{ }\PYG{n}{maxThreads}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{omp\PYGZus{}get\PYGZus{}max\PYGZus{}threads}\PYG{p}{();}
+\PYG{+w}{    }\PYG{n}{threads}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{threads}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{maxThreads}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n}{maxThreads}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{threads}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{threads}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kt}{int64\PYGZus{}t}\PYG{+w}{ }\PYG{n}{step}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{length}\PYG{+w}{ }\PYG{o}{/}\PYG{+w}{ }\PYG{n}{threads}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//split array into multiple parts and sort parts}
+\PYG{+w}{        }\PYG{c+cp}{\PYGZsh{}pragma omp parallel for}
+\PYG{+w}{        }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{uint32\PYGZus{}t}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{threads}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{first1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{first}\PYG{o}{+}\PYG{p}{(}\PYG{n}{i}\PYG{o}{*}\PYG{n}{step}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{It}\PYG{+w}{ }\PYG{n}{last1}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{threads}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{o}{?}\PYG{+w}{ }\PYG{n}{last}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{first1}\PYG{o}{+}\PYG{n}{step}\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{TimSort}\PYG{o}{\PYGZlt{}}\PYG{n}{It}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{Compare}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{tim}\PYG{p}{(}\PYG{n}{first1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{+w}{            }\PYG{n}{tim}\PYG{p}{.}\PYG{n}{sort}\PYG{p}{();}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n}{timsort}\PYG{p}{(}\PYG{n}{first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{comp}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

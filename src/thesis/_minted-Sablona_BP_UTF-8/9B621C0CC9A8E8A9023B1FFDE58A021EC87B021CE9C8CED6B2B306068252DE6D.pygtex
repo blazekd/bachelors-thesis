@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Příklad volání Timsortu}
+\PYG{n}{std}\PYG{o}{::}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{numbers}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{5}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{6}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{8}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{3}\PYG{p}{\PYGZcb{};}
+\PYG{n}{timsort}\PYG{p}{(}\PYG{n}{numbers}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{numbers}\PYG{p}{.}\PYG{n}{end}\PYG{p}{());}
+\PYG{n}{timsort}\PYG{p}{(}\PYG{n}{numbers}\PYG{p}{.}\PYG{n}{begin}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{numbers}\PYG{p}{.}\PYG{n}{end}\PYG{p}{(),}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{greater}\PYG{o}{\PYGZlt{}\PYGZgt{}}\PYG{p}{());}
+\end{Verbatim}
